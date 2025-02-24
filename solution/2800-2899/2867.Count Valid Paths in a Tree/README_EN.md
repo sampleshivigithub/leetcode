@@ -374,7 +374,7 @@ func newUnionFind(n int) *unionFind {
 }
 
 func (uf *unionFind) find(x int) int {
-	if uf.p[x] != x {
+	if uf.p[x] != x {    
 		uf.p[x] = uf.find(uf.p[x])
 	}
 	return uf.p[x]
